@@ -39,7 +39,7 @@ public boolean palindrome(String sWord)
 {
   sWord = onlyLetters(sWord); 
   sWord = noSpaces(sWord);
-  sWord = word.toLowerCase();
+  sWord = sWord.toLowerCase();
   if(word.equals(reVerse(sWord)))
   return true;
   else
@@ -54,7 +54,8 @@ public String reVerse(String sWord)
   return rev;
 }
   
-  public String onlyLetters(String sString){
+  public String onlyLetters(String sString)
+  {
  String letter = "";
  for(int i = 0; i < sString.length(); i++){
   if(Character.isLetter(sString.charAt(i)))
@@ -62,7 +63,8 @@ public String reVerse(String sWord)
  }
  return letter;
 }
-  public String noSpaces(String sWord){
+  public String noSpaces(String sWord)
+  {
  String spaceLess = "";
  for(int i = 0; i < sWord.length(); i++){
   if(sWord.substring(i, i+1).equals(" ") == false)
