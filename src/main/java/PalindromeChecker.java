@@ -35,15 +35,38 @@ public void tester()
     }
   }
 }
-public boolean palindrome(String word)
+public boolean palindrome(String sWord)
 {
-  //your code here
+  sWord = onlyLetters(sWord); 
+  sWord = noSpaces(sWord);
+  sWord = word.toLowerCase();
+  if(word.equals(reVerse(sWord)))
+  return true;
+  else
   return false;
 }
-public String reverse(String str)
+public String reVerse(String sWord)
 {
-    String sNew = new String();
-    //your code here
-    return sNew;
+    String rev = "";
+ for(int i = sWord.length(); i > 0; i--){
+  rev = rev + sWord.substring(i-1, i); 
+ }
+  return rev;
 }
+  
+  public String onlyLetters(String sString){
+ String letter = "";
+ for(int i = 0; i < sString.length(); i++){
+  if(Character.isLetter(sString.charAt(i)))
+   letter = letter + sString.substring(i, i+1);
+ }
+ return letter;
+}
+  public String noSpaces(String sWord){
+ String spaceLess = "";
+ for(int i = 0; i < sWord.length(); i++){
+  if(sWord.substring(i, i+1).equals(" ") == false)
+  spaceLess = spaceLess + sWord.substring(i, i+1);
+ }
+  return spaceLess;
 }
