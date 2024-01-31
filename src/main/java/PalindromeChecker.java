@@ -49,16 +49,17 @@ public String reverse(String str)
     String sNew = new String();
     for(int i = str.length(); i > 0; i--){
     sNew += str.substring(i-1, i); 
-    return sNew;
 }
+   return sNew;
 }
 
 public String onlyLetters(String sString){
  String letter = new String();
  for(int i = 0; i < sString.length(); i++){
-  if(Character.isLetter(sString.charAt(i)) == true)
+  if(Character.isLetter(sString.charAt(i)))
    letter += sString.substring(i, i+1);
  }
  return letter.toLowerCase();
 }
+  
 }
