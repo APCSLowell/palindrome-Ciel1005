@@ -53,7 +53,7 @@ public String reverse(String str)
 }
 
   public String onlyLetters(String sString){
- String letter = "";
+ String letter = new String();
  for(int i = 0; i < sString.length(); i++){
   if(Character.isLetter(sString.charAt(i)))
    letter = letter + sString.substring(i, i+1);
