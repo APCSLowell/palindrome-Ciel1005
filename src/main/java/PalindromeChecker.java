@@ -39,7 +39,7 @@ public boolean palindrome(String word)
 {
   word = onlyLetters(word);
   word = word.toLowerCase();
-  if(word.equals(reVerse(word)))
+  if(word.equals(reverse(word)))
   return true;
   return false;
 }
