@@ -41,22 +41,23 @@ public boolean palindrome(String word)
   pal = onlyLetters(word);
   if(pal.equals(reverse(pal)))
   return true;
+  
   return false;
 }
 public String reverse(String str)
 {
     String sNew = new String();
     for(int i = str.length(); i > 0; i--){
-    sNew = sNew + str.substring(i-1, i); 
+    sNew += str.substring(i-1, i); 
     return sNew;
 }
 }
 
-  public String onlyLetters(String sString){
+public String onlyLetters(String sString){
  String letter = new String();
  for(int i = 0; i < sString.length(); i++){
-  if(Character.isLetter(sString.charAt(i)))
-   letter = letter + sString.substring(i, i+1);
+  if(Character.isLetter(sString.charAt(i)) == true)
+   letter += sString.substring(i, i+1);
  }
  return letter.toLowerCase();
 }
